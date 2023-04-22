@@ -121,6 +121,10 @@ def game_over():
                        tags="game over")
 
 
+def new_game():
+    pass
+
+
 window = Tk()
 
 window.title("Snake Game")
@@ -128,6 +132,12 @@ window.resizable(False, False)
 
 score = 0
 direction = "down"
+
+frame = Frame(window, bg="pink")
+
+Button(frame, text="New Game", command=new_game).pack(side=LEFT)
+Button(frame, text="Quit", command=quit).pack(side=LEFT)
+frame.pack()
 
 label = Label(window, text="Score:{}".format(score), font=('consolas', 40))
 label.pack()
